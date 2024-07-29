@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+   
+   background-color: rgb(1, 8, 43);
+}
+
+.login {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 400px;
+    padding: 40px;
+}
+
+.login h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: azure;
+    text-align: center;
+}
+
+.login .box {
+    position: relative;
+}
+
+.login .box input {
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.login .box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    color: white;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.login .box input:focus ~ label,
+.login .box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: aquamarine;
+    font-size: 10px;
+}
+
+.forget {
+    font-size: 14px;
+    color: darkcyan;
+    float: right;
+    text-decoration: none;
+}
+
+.boto {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px; /* Adiciona espaço ao redor do texto */
+    color: aqua;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+.boto:hover {
+    background: aquamarine;
+    border-radius: 5px;
+    color: darkblue;
+}
+
+.boto span {
+    position: absolute;
+    display: block;
+}
+
+.boto span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: boto1 1s linear infinite;
+}
+
+@keyframes boto1 {
+    0% {
+        left: -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+.boto span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: boto2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes boto2 {
+    0% {
+        top: -100%;
+    }
+    50%, 100% {
+        top: 100%;
+    }
+}
+
+.boto span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: boto3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes boto3 {
+    0% {
+        right: -100%;
+    }
+    50%, 100% {
+        right: 100%;
+    }
+}
+
+.boto span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: boto4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes boto4 {
+    0% {
+        bottom: -100%;
+    }
+    50%, 100% {
+        bottom: 100%;
+    }
+}
